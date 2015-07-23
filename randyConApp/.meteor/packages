@@ -8,3 +8,17 @@ meteor-platform
 autopublish
 insecure
 twbs:bootstrap
+iron:router
+sacha:spin
+aldeed:collection2
+meteorhacks:kadira
+mrt:moment
+meteorhacks:npm
+
+
+npm-container
+grigio:babel
+msavin:mongol
+accounts-password
+less
+reactive-var
