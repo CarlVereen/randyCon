@@ -7,10 +7,10 @@ Router.configure({
 
 Router.route('/', {name: 'eventsList'});
 
-Router.route('/events/:_id', { name: 'eventsPage', data: function() { return Events.findOne(this.params._id); }});
-Router.route('/events/:_id/edit', {name: 'eventsEdit', data: function() {return Events.findOne(this.params._id); }});
+Router.route('/event/:_id', { name: 'eventPage', data: function() { return Events.findOne(this.params._id); }});
+Router.route('/event/:_id/edit', {name: 'eventEdit', data: function() {return Events.findOne(this.params._id); }});
 
-Router.route('/submit', {name: 'eventsSubmit'});
+Router.route('/submit', {name: 'eventSubmit'});
 
 var requireLogin = function() {
   if(! Meteor.user()) {
@@ -24,5 +24,5 @@ var requireLogin = function() {
   }
 };
 
-Router.onBeforeAction('dataNotFound', {only: 'eventsPage'});
-Router.onBeforeAction(requireLogin, {only: 'eventsSubmit'});
+Router.onBeforeAction('dataNotFound', {only: 'eventPage'});
+Router.onBeforeAction(requireLogin, {only: 'eventSubmit'});
