@@ -16,17 +16,17 @@ if (Events.find().count() === 0) {
 }
 if (Players.find().count() === 0) {
   Players.insert({
-    title: 'Carl',
-    url: 'http://sachagreif.com/introducing-telescope/'
+    playername: 'Carl',
+    comments: 'http://sachagreif.com/introducing-telescope/'
   });
 
   Players.insert({
-    title: 'Skipper',
-    url: 'http://meteor.com'
+    playername: 'Skipper',
+    comments: 'http://meteor.com'
   });
 
   Players.insert({
-    title: 'Joel',
-    url: 'http://themeteorbook.com'
+    playername: 'Joel',
+    comments: 'http://themeteorbook.com'
   });
 }

@@ -1,10 +1,10 @@
 <template name="playerItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="#">{{playername}}</a></h3>
       <p>
         submitted by {{author}}
-        {{#if ownPlayer}}<a href="{{pathFor 'playerEdit'}}">Edit</a>{{/if}}
+        <!-- {{#if ownPlayer}}<a href="{{pathFor 'playerEdit'}}">Edit</a>{{/if}} -->
       </p>
     </div>
     <a href="{{pathFor 'playerPage'}}" class="discuss btn btn-default">Details</a>

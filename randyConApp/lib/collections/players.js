@@ -17,12 +17,12 @@ Meteor.methods({
     }
 
     var user = Meteor.user();
-    var players = _.extend(playerAttributes, {
+    var player = _.extend(playerAttributes, {
       userId: user._id,
       author: user.username,
       submitted: new Date()
     });
-    var playerId = Players.insert(players);
+    var playerId = Players.insert(player);
     return {
       _id: playerId
     };

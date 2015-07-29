@@ -6,7 +6,7 @@ Template.playersList.helpers({
 });
 
 Template.playersList.events({
-  'click .btn': function () {
+  'click .register': function () {
     Router.go('/playersubmit');
   }
 });

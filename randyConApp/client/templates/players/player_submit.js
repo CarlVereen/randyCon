@@ -1,3 +1,10 @@
+
+Template.playerSubmit.helpers({
+  events: function() {
+  return Events.find({}, {sort: {submitted: -1}});
+  }
+});
+
 Template.playerSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
