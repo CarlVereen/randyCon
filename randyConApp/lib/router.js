@@ -7,16 +7,16 @@ Router.configure({
 //Home page
 Router.route('/', {name: 'main'});
 //Event submission pages and display pages
-Router.route('/eventslist', {name: 'eventsList', data: function() { return Events.findOne(this.prarms._id); }});
+Router.route('/eventslist', {name: 'eventsList', data: function() { return Events.findOne(this.params._id); }});
 Router.route('/event/:_id', { name: 'eventPage', data: function() { return Events.findOne(this.params._id); }});
 Router.route('/event/:_id/edit', {name: 'eventEdit', data: function() {return Events.findOne(this.params._id); }});
 Router.route('/submit', {name: 'eventSubmit'});
 //Player signup payges and display pages
-Router.route('/playerslist', {name: 'playersList', data: function() { return Players.findOne(this.prarms._id); }});
+Router.route('/playerslist', {name: 'playersList', data: function() { return Players.findOne(this.params._id); }});
 Router.route('/player/:_id', { name: 'playerPage', data: function() { return Players.findOne(this.params._id); }});
-Router.route('/player/:_id/player', {name: 'playerEdit', data: function() {return Players.findOne(this.params._id); }});
+Router.route('/player/:_id/playeredit', {name: 'playerEdit', data: function() {return Players.findOne(this.params._id); }});
 
-Router.route('/playerSubmit', {name: 'playerSubmit'});
+Router.route('/playersubmit', {name: 'playerSubmit'});
 
 
 var requireLogin = function() {

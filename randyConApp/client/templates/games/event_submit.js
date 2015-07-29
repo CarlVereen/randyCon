@@ -3,8 +3,10 @@ Template.eventSubmit.events({
     e.preventDefault();
 
     var events = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      day: $(e.target).find('[name=day]').val(),
+      url: $(e.target).find('[name=url]').val()
+      
     };
 
     Meteor.call('eventInsert', events, function(error, result) {

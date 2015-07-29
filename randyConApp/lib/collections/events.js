@@ -5,6 +5,7 @@ Meteor.methods({
     check(Meteor.userId(), String);
     check(eventAttributes, {
       title: String,
+      day: String,
       url: String,
     });
 
@@ -17,12 +18,12 @@ Meteor.methods({
     }
 
     var user = Meteor.user();
-    var event = _.extend(eventAttributes, {
+    var eventGame = _.extend(eventAttributes, {
       userId: user._id,
       author: user.username,
       submitted: new Date()
     });
-    var eventID = Events.insert(events);
+    var eventId = Events.insert(eventGame);
     return {
       _id: eventId
     };
