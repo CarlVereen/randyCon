@@ -1,17 +1,29 @@
 <template name="playerSubmit">
   <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="url">URL</label>
-      <div class="controls">
-        <input name="url" id="url" type="text" value="" placeholder="Your URL" class="form-control"/>
-      </div>
-    </div>
+
     <div class="form group">
-      <label class="control-label" for="title">Title</label>
+      <label class="control-label" for="name">Name</label>
       <div class="controls">
-        <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control" />
+        <input name="name" id="name" type="text" value="" placeholder="Enter your Name" class="form-control" />
       </div>
     </div>
+
+    <div class="form group">
+      <label class="control-label" for="date"></label>
+      <div class="controls">
+        <input type="checkbox" name="friday" value="Friday" class="form-control"> Friday
+        <input type="checkbox" name="saturday" value="Saturday" class="form-control">Saturday
+        <input type="checkbox" name="sunday" value="Sunday" class="form-control"> Sunday
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="specialcomments">Special Comments</label>
+      <div class="controls">
+        <input name="specialcomments" id="specialcomments" type="text" value="" placeholder="" class="form-control"/>
+      </div>
+    </div>
+
     <input type="submit" value="submit" class="btn btn-primary" />
   </form>
 </template>
