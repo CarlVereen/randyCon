@@ -25,3 +25,7 @@ underscore
 jquery
 ian:accounts-ui-bootstrap-3
 aldeed:template-extension
+aldeed:autoform
+aldeed:autoform-bs-datepicker
+aldeed:simple-schema
+pcel:serialize

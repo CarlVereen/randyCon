@@ -7,15 +7,20 @@ Template.playerSubmit.helpers({
 
 Template.playerSubmit.events({
   'submit form': function(e) {
+    var players = $('#form').serializeJSON();
+    console.log(players);
     e.preventDefault();
 
-    var players = {
-      playername: $(e.target).find('[name=playername]').val(),
-      // friday: $(e.target).find('[name=friday]').val(),
-      // saturday: $(e.target).find('[name=saturday]').val(),
-      // sunday: $(e.target).find('[name=sunday]').val(),
-      comments: $(e.target).find('[name=specialcomments]').val()
-    };
+
+    // var players = {
+    //   playername: $(e.target).find('[name=playername]').val(),
+    //   thursday: $(e.target).find('[name=thursday]').val(),
+    //   friday: $(e.target).find('[name=friday]').val(),
+    //   saturday: $(e.target).find('[name=saturday]').val(),
+    //   sunday: $(e.target).find('[name=sunday]').val(),
+    //   comments: $(e.target).find('[name=specialcomments]').val()
+    //
+    // };
 
     Meteor.call('playerInsert', players, function(error, result) {
       //display the error to the user and abort

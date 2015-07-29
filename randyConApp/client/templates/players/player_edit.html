@@ -1,19 +1,50 @@
 <template name="playerEdit">
   <form class="main form page">
-    <div class="form-group">
-      <label class="control-label" for="url">URL</label>
+
+    <div class="form group">
+      <label class="control-label" for="playername">Name</label>
       <div class="controls">
-        <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control"/>
+        <input name="playername" id="playername" type="text" value="{{playername}}" class="form-control" />
       </div>
     </div>
-    <div class="form-group">
-      <label class="control-label" for="title">Title</label>
+
+    <div class="form group">
+      <label class="control-label space" for="date">What days will you be attending?</label>
       <div class="controls">
-        <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your post" class="form-control"/>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Thursday Night</div>
+              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Friday</div>
+              <div class="col-md-3"><input type="checkbox" name="saturday" id="saturday" value="Saturday" class=""> Saturday</div>
+              <div class="col-md-3"><input type="checkbox" name="sunday" id="sunday" value="Sunday" class=""> Sunday</div>
+          </div>
+        </div>
       </div>
     </div>
-    <input type="submit" value="submit" class="btn btn-primary submit"/>
+
+    <div class="form-group">
+      <label class="control-label space" for="specialcomments">What games do you want to play?</label>
+      <div class="controls">
+        <div class="container">
+          <div class="row">
+            {{#each events}}
+              <div class="col-md-2"><input type="checkbox" name={{title}} id={{title}} value={{title}} class=""> {{title}}</div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label space" for="specialcomments">Special Comments</label>
+      <div class="controls">
+        <input name="specialcomments" id="specialcomments" type="text" value="" placeholder="" class="form-control"/>
+      </div>
+    </div>
+
+    <input type="submit" value="submit" class="btn btn-primary" />
+  </form>
     <hr/>
     <a class="btn btn-danger delete" href="#">Delete post</a>
-  </form>
+  <!-- </form> -->
 </template>

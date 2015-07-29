@@ -3,18 +3,18 @@ Players = new Mongo.Collection('players');
 Meteor.methods({
   playerInsert: function(playerAttributes) {
     check(Meteor.userId(), String);
-    check(playerAttributes, {
-      playername: String,
-      comments: String,
-    });
+    // check(playerAttributes, {
+    //   playername: String,
+    //   comments: String,
+    // });
 
-    var playerWithSameLink = Players.findOne({url: playerAttributes.url});
-    if(playerWithSameLink) {
-      return {
-        playerExists: true,
-        _id: playerWithSameLink._id
-      };
-    }
+    // var playerWithSameName = Players.findOne({playername: playerAttributes.playername});
+    // if(playerWithSameName) {
+    //   return {
+    //     playerExists: true,
+    //     _id: playerWithSameName._id
+    //   };
+    // }
 
     var user = Meteor.user();
     var player = _.extend(playerAttributes, {
