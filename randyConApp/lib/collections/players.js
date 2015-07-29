@@ -4,8 +4,8 @@ Meteor.methods({
   playerInsert: function(playerAttributes) {
     check(Meteor.userId(), String);
     check(playerAttributes, {
-      title: String,
-      url: String,
+      playername: String,
+      comments: String,
     });
 
     var playerWithSameLink = Players.findOne({url: playerAttributes.url});
@@ -17,7 +17,7 @@ Meteor.methods({
     }
 
     var user = Meteor.user();
-    var player = _.extend(playerAttributes, {
+    var players = _.extend(playerAttributes, {
       userId: user._id,
       author: user.username,
       submitted: new Date()

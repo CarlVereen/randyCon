@@ -3,8 +3,11 @@ Template.playerSubmit.events({
     e.preventDefault();
 
     var players = {
-      url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      playername: $(e.target).find('[name=playername]').val(),
+      // friday: $(e.target).find('[name=friday]').val(),
+      // saturday: $(e.target).find('[name=saturday]').val(),
+      // sunday: $(e.target).find('[name=sunday]').val(),
+      comments: $(e.target).find('[name=specialcomments]').val()
     };
 
     Meteor.call('playerInsert', players, function(error, result) {
