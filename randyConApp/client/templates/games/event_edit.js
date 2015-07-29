@@ -25,7 +25,7 @@ Template.eventEdit.events({
 
     if(confirm('Delete this Post?')) {
       var currentEventId = this._id;
-      Posts.remove(currentEventId);
+      Events.remove(currentEventId);
       Router.go('eventsList');
     }
   }

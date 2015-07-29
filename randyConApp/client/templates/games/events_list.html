@@ -1,0 +1,12 @@
+<template name="eventsList">
+  <div class="container">
+    <div class="row">
+      <button type="button" name="newGame" class="btn btn-primary">New Game or Event</button>
+    </div>
+  </div>
+  <div class="posts">
+    {{#each events}}
+      {{> eventItem}}
+    {{/each}}
+  </div>
+</template>

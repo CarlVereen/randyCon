@@ -14,3 +14,19 @@ if (Events.find().count() === 0) {
     url: 'http://themeteorbook.com'
   });
 }
+if (Players.find().count() === 0) {
+  Players.insert({
+    title: 'Carl',
+    url: 'http://sachagreif.com/introducing-telescope/'
+  });
+
+  Players.insert({
+    title: 'Skipper',
+    url: 'http://meteor.com'
+  });
+
+  Players.insert({
+    title: 'Joel',
+    url: 'http://themeteorbook.com'
+  });
+}
