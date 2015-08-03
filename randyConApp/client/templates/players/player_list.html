@@ -1,6 +1,12 @@
 <template name="playersList">
   <div class="container">
     <div class="row">
+      <label for="gameTitle" class="">Player Name</label>
+      <input type="text" name="playername" value="" id="playerName" placeholder="Name Here" class="newPlayer" />
+      <label for="url" class="">Special Comments</label>
+      <input type="text" name="specialComments" value="" id="url"   placeholder="Not Required" class="newPlayer"/>
+      <label for="url" class="">Day(s) you are coming</label>
+      <input type="text" name="days" value="" id="days"   placeholder="Thur, Fri, Sat, Sun" class="newPlayer"/>
       <button type="button" name="player" class="btn btn-primary register">Register</button>
     </div>
   </div>
@@ -8,5 +14,6 @@
     {{#each players}}
       {{> playerItem}}
     {{/each}}
+
   </div>
 </template>

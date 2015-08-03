@@ -1,10 +1,11 @@
 <template name="playerEdit">
-  <form class="main form page">
+
+  <form class="main form page" id="form">
 
     <div class="form group">
-      <label class="control-label" for="playername">Name</label>
+      <label class="control-label" for="playername">Game {{title}}</label>
       <div class="controls">
-        <input name="playername" id="playername" type="text" value="{{playername}}" class="form-control" />
+        <input name="playername" id="playername" type="text" value={{playername}} class="form-control" />
       </div>
     </div>
 
@@ -13,10 +14,10 @@
       <div class="controls">
         <div class="container">
           <div class="row">
-              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Thursday Night</div>
-              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Friday</div>
-              <div class="col-md-3"><input type="checkbox" name="saturday" id="saturday" value="Saturday" class=""> Saturday</div>
-              <div class="col-md-3"><input type="checkbox" name="sunday" id="sunday" value="Sunday" class=""> Sunday</div>
+              <div class="col-md-3"><input type="checkbox" name="thursday" id="thursday" value="Thursday" class="" {{thursday}}> Thursday Night</div>
+              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class="" {{friday}}> Friday</div>
+              <div class="col-md-3"><input type="checkbox" name="saturday" id="saturday" value="Saturday" class="" {{saturday}}> Saturday</div>
+              <div class="col-md-3"><input type="checkbox" name="sunday" id="sunday" value="Sunday" class="" {{sunday}}> Sunday</div>
           </div>
         </div>
       </div>
@@ -28,8 +29,15 @@
         <div class="container">
           <div class="row">
             {{#each events}}
-              <div class="col-md-2"><input type="checkbox" name={{title}} id={{title}} value={{title}} class=""> {{title}}</div>
+                <!-- {{> eventSignup}} -->
             {{/each}}
+            {{#each elementToReturn}}
+
+                <p>Key is: {{key}}</p>
+                <p>Value is: {{value}}</p>
+
+            {{/each}}
+
           </div>
         </div>
       </div>
@@ -41,10 +49,15 @@
         <input name="specialcomments" id="specialcomments" type="text" value="" placeholder="" class="form-control"/>
       </div>
     </div>
-
-    <input type="submit" value="submit" class="btn btn-primary" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"><input type="submit" value="Submit Changes" class="btn btn-primary" /></div>
+        <div class="col-md-2"><a class="btn btn-primary" href="#">Cancel</a></div>
+        <div class="col-md-3"><a class="btn btn-danger delete" href="#">Delete post</a></div>
+      </div>
+    </div>
   </form>
-    <hr/>
-    <a class="btn btn-danger delete" href="#">Delete post</a>
-  <!-- </form> -->
+
+
+
 </template>

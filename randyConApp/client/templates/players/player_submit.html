@@ -4,7 +4,7 @@
     <div class="form group">
       <label class="control-label" for="playername">Name</label>
       <div class="controls">
-        <input name="playername" id="playername" type="text" value="" placeholder="Enter your Name" class="form-control" />
+        <input name="playername" id="playername" type="text" value="" placeholder="Enter your Name" class="form-control playerInfo" />
       </div>
     </div>
 
@@ -13,22 +13,23 @@
       <div class="controls">
         <div class="container">
           <div class="row">
-              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Thursday Night</div>
-              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="Friday" class=""> Friday</div>
-              <div class="col-md-3"><input type="checkbox" name="saturday" id="saturday" value="Saturday" class=""> Saturday</div>
-              <div class="col-md-3"><input type="checkbox" name="sunday" id="sunday" value="Sunday" class=""> Sunday</div>
+              <div class="col-md-3"><input type="checkbox" name="thursday" id="thursday" value="checked" class="playerInfo"> Thursday Night</div>
+              <div class="col-md-3"><input type="checkbox" name="friday" id="friday" value="checked" class="playerInfo"> Friday</div>
+              <div class="col-md-3"><input type="checkbox" name="saturday" id="saturday" value="checked" class="playerInfo"> Saturday</div>
+              <div class="col-md-3"><input type="checkbox" name="sunday" id="sunday" value="checked" class="playerInfo"> Sunday</div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label space" for="specialcomments">What games do you want to play?</label>
+      <label class="control-label space" for="playgames">What games do you want to play?</label>
       <div class="controls">
         <div class="container">
           <div class="row">
             {{#each events}}
-              <div class="col-md-2"><input type="checkbox" name={{title}} id={{title}} value={{title}} class=""> {{title}}</div>
+              <div class="col-md-2"><input type="checkbox" class="gameInfo" name="title" value="{{title}}" id={{_id}} /> {{title}}</div>
+              <!-- <div class="col-md-2"><input type="checkbox" name={{title}} id={{title}} value="checked" class=""> {{title}}</div> -->
             {{/each}}
           </div>
         </div>
@@ -44,4 +45,5 @@
 
     <input type="submit" value="submit" class="btn btn-primary" />
   </form>
+
 </template>

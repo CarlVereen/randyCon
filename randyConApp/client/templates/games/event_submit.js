@@ -2,12 +2,7 @@ Template.eventSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    var events = {
-      title: $(e.target).find('[name=title]').val(),
-      day: $(e.target).find('[name=day]').val(),
-      url: $(e.target).find('[name=url]').val()
-      
-    };
+    var events = $('#form').serializeJSON();
 
     Meteor.call('eventInsert', events, function(error, result) {
       //display the error to the user and abort

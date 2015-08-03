@@ -15,8 +15,9 @@ Router.route('/submit', {name: 'eventSubmit'});
 Router.route('/playerslist', {name: 'playersList', data: function() { return Players.findOne(this.params._id); }});
 Router.route('/player/:_id', { name: 'playerPage', data: function() { return Players.findOne(this.params._id); }});
 Router.route('/player/:_id/playeredit', {name: 'playerEdit', data: function() {return Players.findOne(this.params._id); }});
-
 Router.route('/playersubmit', {name: 'playerSubmit'});
+//other various pages. Mostly static information.
+Router.route('/maindetails', {name: 'mainDetails'});
 
 
 var requireLogin = function() {

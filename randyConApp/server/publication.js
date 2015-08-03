@@ -1,6 +1,6 @@
 Meteor.publish('events', function() {
   return [
-    Events.find(),
+    Events.find({}, {gameTitle: -1}),
     Players.find()
   ];
 });

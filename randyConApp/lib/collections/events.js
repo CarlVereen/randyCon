@@ -4,9 +4,9 @@ Meteor.methods({
   eventInsert: function(eventAttributes) {
     check(Meteor.userId(), String);
     check(eventAttributes, {
-      title: String,
-      day: String,
-      url: String,
+      gameTitle: String,
+      days: String,
+      details: String,
     });
 
     var eventWithSameLink = Events.findOne({url: eventAttributes.url});

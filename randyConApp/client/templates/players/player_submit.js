@@ -1,26 +1,44 @@
+gamesSelected = ['dominion', 'Carl'];
 
 Template.playerSubmit.helpers({
   events: function() {
   return Events.find({}, {sort: {submitted: -1}});
-  }
+},
+
+
 });
 
 Template.playerSubmit.events({
+  // 'click .btn': function(event) {
+  //   var elementId = event.currentTarget.id;
+  //   var buttonId = '#' + elementId;
+  //   console.log(buttonId);
+  //   if($(buttonId).hasClass('selected')) {
+  //     $(buttonId).removeClass('selected');
+  //   }
+  //   else {
+  //       $(buttonId).addClass('selected');
+  //   }
+  //   if(jQuery.inArray(elementId, gamesSelected) === -1) {
+  //     gamesSelected.push(elementId);
+  //   }
+  //   console.log(gamesSelected);
+  //   selected();
+  //
+  // },
+
   'submit form': function(e) {
     var players = $('#form').serializeJSON();
+    var gamesSelected = $(".gameInfo").serializeJSON();
+    gTitles = [];
+    // gamesSelected.forEach(function(game) {
+    //     gTitles.push(game.title);
+    //     console.log(gTitles);
+    //   });
     console.log(players);
+    console.log(gamesSelected);
     e.preventDefault();
 
-
-    // var players = {
-    //   playername: $(e.target).find('[name=playername]').val(),
-    //   thursday: $(e.target).find('[name=thursday]').val(),
-    //   friday: $(e.target).find('[name=friday]').val(),
-    //   saturday: $(e.target).find('[name=saturday]').val(),
-    //   sunday: $(e.target).find('[name=sunday]').val(),
-    //   comments: $(e.target).find('[name=specialcomments]').val()
-    //
-    // };
 
     Meteor.call('playerInsert', players, function(error, result) {
       //display the error to the user and abort

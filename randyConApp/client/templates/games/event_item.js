@@ -8,3 +8,15 @@ Template.eventItem.helpers({
     return a.hostname;
   }
 });
+
+Template.eventItem.events({
+  'click .delete': function(e) {
+    e.preventDefault();
+
+    if(confirm('Delete this Post?')) {
+      var currentEventId = this._id;
+      Events.remove(currentEventId);
+    }
+  }
+
+});

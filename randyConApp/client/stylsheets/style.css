@@ -165,3 +165,23 @@ body {
 .space {
   margin: 10px 0px;
 }
+
+.selected {
+  color: green;
+}
+
+.gameBox {
+  border: 1px solid rgba(192, 187, 193, 0.73) ;
+  background-color: rgb(241, 246, 250);
+  border-radius: 5px;
+}
+
+.delete {
+  float: right;
+
+
+}
+.times{
+  width: 100%;
+  margin-left: 5px;
+}

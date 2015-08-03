@@ -1,12 +1,15 @@
 <template name="eventItem">
-  <div class="post">
-    <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{day}}</span></h3>
-      <p>
-        submitted by {{author}}
-        {{#if ownPost}}<a href="{{pathFor 'eventEdit'}}">Edit</a>{{/if}}
-      </p>
-    </div>
-    <a href="{{pathFor 'eventPage'}}" class="discuss btn btn-default">Details</a>
+      <div class="col-md-3 gameBox">
+        {{#if ownPost}}
+        <!-- <a href="{{pathFor 'eventEdit'}}">Edit</a> -->
+        <input type="image" src="delete.png" name="delete" class="delete" />
+        {{/if}}
+        <h3><a href="{{pathFor 'eventPage'}}">{{gameTitle}}</a><span>{{day}}</span></h3>
+        <p>Available: {{days}}</p>
+        {{#if url}}<a href="{{url}}" class="">Geek Page</a>{{/if}}
+        <p>
+          This Title brought by {{author}}
+
+        </p>
   </div>
 </template>
