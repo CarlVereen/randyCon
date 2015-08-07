@@ -7,15 +7,17 @@ Meteor.methods({
       gameTitle: String,
       days: String,
       details: String,
+      numPlayers: Number,
+      playersRemain: Number,
     });
 
     var eventWithSameLink = Events.findOne({url: eventAttributes.url});
-    if(eventWithSameLink) {
-      return {
-        eventExists: true,
-        _id: eventWithSameLink._id
-      };
-    }
+    // if(eventWithSameLink) {
+    //   return {
+    //     eventExists: true,
+    //     _id: eventWithSameLink._id
+    //   };
+    // }
 
     var user = Meteor.user();
     var eventGame = _.extend(eventAttributes, {

@@ -1,13 +1,17 @@
 <template name="eventsList">
   <div class="container">
     <div class="row">
-      <button type="button" name="newGame" class="btn btn-primary newGame">New Game</button>
       <label for="gameTitle" class="">Game Title</label>
       <input type="text" name="gameTitle" value="" id="gameTitle" placeholder="Game title" class="newGame" />
       <label for="url" class="">Event details</label>
       <input type="text" name="details" value="" id="details"   placeholder="BGG Link or event details" class="newGame"/>
       <label for="url" class="">Day(s) the game is available for play</label>
       <input type="text" name="days" value="" id="days"   placeholder="Thur, Fri, Sat, Sun" class="newGame"/>
+      <label for="url" class="">Number of Players</label>
+      <input type="number" name="numPlayers" value="" id="numPlayers"   placeholder="Number" class="newGame"/>
+    </div>
+    <div class="row">
+      <button type="button" name="newGame" class="btn btn-primary newGame">New Game</button>
     </div>
   </div>
   <div class="posts">

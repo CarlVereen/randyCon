@@ -185,3 +185,31 @@ body {
   width: 100%;
   margin-left: 5px;
 }
+.signup {
+  font-size: .75em;
+  float:right;
+  margin-top: 1%;
+  border-radius: 20%;
+}
+
+.col-xs-6{
+  /*border: 1px solid black;*/
+  text-align: center;
+}
+
+.player {
+  font: 1.75em bold;
+  border: 1px solid rgba(192, 187, 193, 0.73) ;
+  background-color: rgb(241, 246, 250);
+  border-radius: 5px;
+}
+
+.numPlayers{
+  margin: 0;
+  padding: 0;
+  font: 1.5em;
+}
+
+.gamebringer {
+  font: 1.5em;
+}

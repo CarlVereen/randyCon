@@ -10,7 +10,9 @@ Template.eventsList.events({
     // Router.go('/submit');
 
     var events = $('.newGame').serializeJSON();
-    console.log(events);
+    events.numPlayers = Number(events.numPlayers);
+    events.playersRemain = events.numPlayers;
+    // console.log(events);
     $("input[type=text], textarea").val("");
     Meteor.call('eventInsert', events, function(error, result) {
       //display the error to the user and abort
