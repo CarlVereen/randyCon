@@ -1,13 +1,14 @@
 Template.eventEdit.events({
-  'click .btn': function(e) {
+  'submit form': function(e) {
     e.preventDefault();
 
     var currentEventId = this._id;
 
 
-    var eventProperties = $('.newGame').serializeJSON();
-      eventProperties.numPlayers = Number(eventProperties.numPlayers);
-      eventProperties.playersRemain = eventProperties.numPlayers;
+    var eventProperties = {
+      url: $(e.target).find('[name=url]').val(),
+      title: $(e.target).find('[name=title]').val()
+    }
 
     Events.update(currentEventId, {$set: eventProperties}, function(error) {
       if(error) {

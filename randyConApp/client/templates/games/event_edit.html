@@ -1,23 +1,19 @@
 <template name="eventEdit">
   <form class="main form page">
     <div class="form-group">
-        <label for="gameTitle" class="">Game Title</label>
-        <input type="text" name="gameTitle" value="{{gameTitle}}" id="gameTitle" placeholder="Game title" class="newGame" />
+      <label class="control-label" for="url">URL</label>
+      <div class="controls">
+        <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control"/>
+      </div>
     </div>
     <div class="form-group">
-        <label for="details" class="">Event details</label>
-        <input type="text" name="details" value="{{details}}" id="details"   placeholder="BGG Link or event details" class="newGame"/>
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+        <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your post" class="form-control"/>
+      </div>
     </div>
-    <div class="form-group">
-        <label for="days" class="">Day(s) the game is available for play</label>
-        <input type="text" name="days" value="{{days}}" id="days"   placeholder="Thur, Fri, Sat, Sun" class="newGame"/>
-    </div>
-    <div class="form-group">
-        <label for="numPlayers" class="">Number of Players</label>
-        <input type="number" name="numPlayers" value="{{numPlayers}}" id="numPlayers"   placeholder="Number" class="newGame"/>
-    </div>
-    <div class="form-group">
-      <button type="button" name="newGame" class="btn btn-primary newGame">Submit Changes</button>
-    </div>
+    <input type="submit" value="submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete post</a>
   </form>
 </template>

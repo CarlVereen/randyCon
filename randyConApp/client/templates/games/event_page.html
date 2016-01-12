@@ -6,12 +6,10 @@
           <div class="col-md-6 player" id="player">
             Players: {{#each playerList}} <p>{{this}}</p> {{/each}}
           </div>
-      </div>
-      <div class="row">
-        {{#if ownPost}}
-        <a class="btn btn-info" href="{{pathFor 'eventEdit'}}">Edit</a>
-        <a class="btn btn-danger del" href="#">Delete post</a>
-        {{/if}}
+          {{#if ownPost}}
+          <!-- <a href="{{pathFor 'eventEdit'}}">Edit</a> -->
+          <a class="btn btn-danger delete" href="#">Delete post</a>
+          {{/if}}
       </div>
     </div>
   </div>
