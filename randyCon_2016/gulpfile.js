@@ -12,11 +12,12 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
     browserSync = require('browser-sync').create(),
     del = require('del'),
     plumber = require('gulp-plumber'),
     reload = browserSync.reload;
+
+//auto install
 
 //clean up previous or incorrect or missing files
 gulp.task('clean', function() {
