@@ -56,28 +56,24 @@
       </div> <!--Row one image  end-->
       <div class="main-container">
       <div class="row">
-        <div class=".hidden-xs col-md-3 col-lg-3 ">
-          <div class=". hidden-xs panel panel-info fixed">
+        <div class=".hidden-xs col-md-4 col-lg-4 ">
+          <div class=". hidden-xs panel panel-default fixed">
             <div class="panel-heading">
-              <h2 class="panel-title">Here is news content</h2>
+              <h2 class="panel-title">Dice Tower News</h2>
             </div>
             <div class="panel-body">
-              <ul class="list-group">
-                <li class="list-group-item">Place holder Test </li>
-                <li class="list-group-item">Place holder Test </li>
-                <li class="list-group-item">Place holder 3 </li>
-              </ul>
+              <div id="divRss"></div>
             </div> <!-- News list end-->
           </div> <!--News panel end -->
         </div> <!--news column end-->
-        <div class="col-xs-9 col-md-9 col-lg-9">
+        <div class="col-xs-8 col-md-8 col-lg-8">
           <div class="row clearfix">
             <img class="img-responsive" src="images/randyCon_logo.png">
             <p>Randy Con is the original, best attended, longest running, free gaming convention hosted by Randy in the World. <br> Featuring a game library many are jealous of, amazing attendees and the best host in the universe. <br> Randy Con truly is The Best Free Days in Gaming!</p>
           </div>
           <div class="row">
               <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/wolf_moon_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-6 col-md-6 col-lg-6 mainlinks"><p>Badge Registration</p><p>Opens January 16th</p></div></div>
-              <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/chesire_cat_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-6 col-md-6 col-lg-6 mainlinks"><p>Event Registration</p><p>Open Now Closes February 1st</p></div></div>
+              <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/chesire_cat_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-6 col-md-6 col-lg-6 mainlinks"><p>Event Registration</p><p>Open Now <br>Closes February 1st</p></div></div>
               <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/magic_shop3_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-6 col-md-6 col-lg-6 mainlinks"><p>Randy Con</p><p>Official gear</p></div></div>
           </div> <!-- Registration list end -->
         </div> <!-- Main website section end -->
@@ -158,6 +154,13 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
       <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript" src="scripts/FeedEk/FeedEk.js"></script>
       <script src="scripts/main.js"></script>
+      <script type="text/javascript">
+      $('#divRss').FeedEk({
+          FeedUrl: 'http://dicetowernews.com/?feed=rss2',
+          MaxCount: 3
+      });
+      </script>
   </body>
 </html>

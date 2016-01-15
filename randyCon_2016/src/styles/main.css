@@ -1,6 +1,9 @@
 body {
-  font: 100% "Arvo", serif;
-  color: blue; }
+  font: 1.25em "Arvo", serif;
+  color: #333; }
+
+#divRss li {
+  list-style-type: none; }
 
 .mainlinks {
   background-color: #777;
