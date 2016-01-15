@@ -52,11 +52,10 @@ gulp.task('process-styles', function() {
 //process all js files
 gulp.task('process-scripts', function() {
   return gulp.src('src/scripts/*.js')
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'))
   //create combined js file
   .pipe(concat('main.js'))
   .pipe(gulp.dest('dist/scripts/'))
+  // .pipe(gulp.dest('src/scripts/'))
   //create minified version and retain main.js
   .pipe(rename({suffix: '.min'}))
   .pipe(browserify())

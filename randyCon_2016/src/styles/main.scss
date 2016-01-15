@@ -1,7 +1,29 @@
-$font-stack:  "Times New Roman", cursive, sans-serif;
+$font-stack:  'Arvo', serif;
 $primary-color: blue;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+
+
+
+.mainlinks {
+  background-color: #777;
+  font-size: 300%;
+  font-style: italic;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+
+}
+
+.mainlinksimg{
+  color: white;
+  margin-top: 4%;
+  display: block;
+}
+
+.main-container {
+  margin-top: 0.5%;
 }
