@@ -1,1 +1,166 @@
-{"messages":[{"type":"info","message":"The Content-Type was “text/html”. Using the HTML parser."},{"type":"info","message":"Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support."},{"type":"info","lastLine":16,"lastColumn":296,"firstColumn":7,"subType":"warning","message":"Potentially bad value “sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==” for attribute “integrity” on element “link”: Invalid base64-value (bad padding). Consider using RFC4648 compliant base64 encoding implementation","extract":"s\">\n      <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\" rel=\"stylesheet\" integrity=\"sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==\" crossorigin=\"anonymous\">\n     ","hiliteStart":10,"hiliteLength":290},{"type":"error","lastLine":41,"lastColumn":64,"firstColumn":13,"message":"Element “form” not allowed as child of element “ul” in this context. (Suppressing further errors from this subtree.)","extract":"          <form class=\"navbar-form navbar-left\" role=\"search\">\n     ","hiliteStart":10,"hiliteLength":52},{"type":"error","lastLine":75,"lastColumn":71,"firstColumn":13,"message":"An “img” element must have an “alt” attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.","extract":"          <img class=\"img-responsive\" src=\"images/randyCon_logo.png\">\n     ","hiliteStart":10,"hiliteLength":59},{"type":"error","lastLine":137,"lastColumn":122,"firstColumn":17,"message":"Duplicate ID “username”.","extract":"          <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"User Name\" data-bind=\"value: username\">\n     ","hiliteStart":10,"hiliteLength":106},{"type":"info","lastLine":100,"lastColumn":122,"firstColumn":17,"subType":"warning","message":"The first occurrence of ID “username” was here.","extract":"          <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"User Name\" data-bind=\"value: username\">\n     ","hiliteStart":10,"hiliteLength":106},{"type":"error","lastLine":141,"lastColumn":133,"firstColumn":17,"message":"Duplicate ID “userpassword”.","extract":"          <input type=\"password\" class=\"form-control\" id=\"userpassword\" placeholder=\"Password\" data-bind=\"value: userpassword\">\n     ","hiliteStart":10,"hiliteLength":117},{"type":"info","lastLine":108,"lastColumn":133,"firstColumn":17,"subType":"warning","message":"The first occurrence of ID “userpassword” was here.","extract":"          <input type=\"password\" class=\"form-control\" id=\"userpassword\" placeholder=\"Password\" data-bind=\"value: userpassword\">\n     ","hiliteStart":10,"hiliteLength":117},{"type":"error","lastLine":89,"lastColumn":122,"firstColumn":5,"message":"The “aria-labelledby” attribute must point to an element in the same document.","extract":"n -->\n    <div class=\"modal fade bs-modal-sm\" id=\"registration\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\">\n     ","hiliteStart":10,"hiliteLength":118},{"type":"error","lastLine":126,"lastColumn":105,"firstColumn":5,"message":"The “aria-labelledby” attribute must point to an element in the same document.","extract":"n -->\n    <div class=\"modal fade bs-modal-sm\" id=\"signIn\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"SignIn\">\n     ","hiliteStart":10,"hiliteLength":101}]}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Randy Con II</title>
+
+    <!-- Bootstrap -->
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+      <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+      <!--local css file -->
+      <link rel="stylesheet" href="styles/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Randy Con II</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="modal" data-target="#signIn">Sign In</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+              <button type="button" class="btn btn-default" onclick="googleRequest()">Search</button>
+            </form>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- Main page contents -->
+    <div class="container-fluid">
+      <div class="row">
+        <img src="images/hbd_banner_name_w1300xh325.jpg" class="img-responsive" alt="Randy Con II Banner">
+      </div> <!--Row one image  end-->
+      <div class="main-container">
+      <div class="row">
+        <div class=".hidden-xs col-md-4 col-lg-4 ">
+          <div class=". hidden-xs panel panel-default fixed">
+            <div class="panel-heading">
+              <h2 class="panel-title">Dice Tower News</h2>
+            </div>
+            <div class="panel-body">
+              <div id="divRss"></div>
+            </div> <!-- News list end-->
+          </div> <!--News panel end -->
+        </div> <!--news column end-->
+        <div class="col-xs-12 col-md-8 col-lg-8">
+          <div class="row clearfix">
+            <img class="img-responsive" src="images/randyCon_logo.png">
+            <p>Randy Con is the original, best attended, longest running, free gaming convention hosted by Randy in the World. <br> Featuring a game library many are jealous of, amazing attendees and the best host in the universe. <br> Randy Con truly is The Best Free Days in Gaming!</p>
+          </div>
+          <div class="row">
+              <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/wolf_moon_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-12 col-md-8 col-lg-8 mainlinks"><p>Badge Registration</p><p>Opens January 16th</p></div></div>
+              <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/chesire_cat_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-12 col-md-8 col-lg-8 mainlinks"><p>Event Registration</p><p>Open Now <br>Closes February 1st</p></div></div>
+              <div class="row clearfix"><div class="col-xs-8 col-md-2 col-lg-2 "><img src="images/magic_shop3_w150.jpg" class="img-responsive img-rounded mainlinksimg" alt="Dragon"></div><div class="col-xs-12 col-md-8 col-lg-8 mainlinks"><p>Randy Con</p><p>Official gear</p></div></div>
+          </div> <!-- Registration list end -->
+        </div> <!-- Main website section end -->
+      </div> <!--Row two news and links container end-->
+    </div>
+    </div>
+
+    <!--Modal dialog for registration -->
+    <div class="modal fade bs-modal-sm" id="registration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">Randy Con II -- Registration</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" id="username" placeholder="User Name" data-bind="value: username">
+              </div>
+              <div class="form-group">
+                <label for="useremail">Email address</label>
+                <input type="email" class="form-control" id="useremail" placeholder="Email" data-bind="value: useremail">
+              </div>
+              <div class="form-group">
+                <label for="userpassword">Password</label>
+                <input type="password" class="form-control" id="userpassword" placeholder="Password" data-bind="value: userpassword">
+              </div>
+              <div class="form-group">
+                <label for="userpasswordvalidate">Password Validation</label>
+                <input type="password" class="form-control" id="userpasswordvalidate" placeholder="Password" data-bind="value: userpasswordvalidate">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form> <!--form end-->
+          </div> <!-- modal body end -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> <!-- modal footer end -->
+        </div> <!--modal content end -->
+      </div> <!--modal dialog end -->
+    </div> <!--modal container end-->
+
+    <!--Modal dialog for sign in -->
+    <div class="modal fade bs-modal-sm" id="signIn" tabindex="-1" role="dialog" aria-labelledby="SignIn">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="signIN">Randy Con II -- Login</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" id="username" placeholder="User Name" data-bind="value: username">
+              </div>
+              <div class="form-group">
+                <label for="userpassword">Password</label>
+                <input type="password" class="form-control" id="userpassword" placeholder="Password" data-bind="value: userpassword">
+              </div>
+            </form> <!--form end-->
+          </div> <!-- modal body end -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+            <a href="#" class="pull-left">Forgot Password or Username</a>
+          </div> <!-- modal footer end -->
+        </div> <!--modal content end -->
+      </div> <!--modal dialog end -->
+    </div> <!--modal container end-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <!-- Latest compiled and minified Bootstrap JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript" src="scripts/FeedEk/FeedEk.js"></script>
+      <script src="scripts/main.js"></script>
+      <script type="text/javascript">
+      $('#divRss').FeedEk({
+          FeedUrl: 'http://dicetowernews.com/?feed=rss2',
+          MaxCount: 3
+      });
+      </script>
+  </body>
+</html>

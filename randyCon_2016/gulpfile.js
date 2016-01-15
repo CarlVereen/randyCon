@@ -27,8 +27,8 @@ gulp.task('clean', function() {
 //process html files
 gulp.task('process-html', function() {
   return gulp.src('src/index.html')
-  .pipe(htmlv())
-  .pipe(gulp.dest('dist/'));
+  .pipe(gulp.dest('dist/'))
+  .pipe(gulp.dest('~/Desktop/CareerChange/NanoDegree/frontEnd/mehkai.github.io/randyCon_2016/'));
 });
 
 //process all style files sass, less, css etc...
@@ -39,11 +39,13 @@ gulp.task('process-styles', function() {
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(gulp.dest('src/styles/'))
+    .pipe(gulp.dest('~/Desktop/CareerChange/NanoDegree/frontEnd/mehkai.github.io/randyCon_2016/styles/'))
     .pipe(browserSync.stream())
   //minify css files and maintain main.css
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/styles/'))
+    .pipe(gulp.dest('~/Desktop/CareerChange/NanoDegree/frontEnd/mehkai.github.io/randyCon_2016/styles/'))
 
     .pipe(notify({message: 'Style task complete'}));
 
@@ -55,12 +57,14 @@ gulp.task('process-scripts', function() {
   //create combined js file
   .pipe(concat('main.js'))
   .pipe(gulp.dest('dist/scripts/'))
+  .pipe(gulp.dest('~/Desktop/CareerChange/NanoDegree/frontEnd/mehkai.github.io/randyCon_2016/scripts/'))
   // .pipe(gulp.dest('src/scripts/'))
   //create minified version and retain main.js
   .pipe(rename({suffix: '.min'}))
   .pipe(browserify())
   .pipe(uglify())
   .pipe(gulp.dest('dist/scripts/'))
+  .pipe(gulp.dest('~/Desktop/CareerChange/NanoDegree/frontEnd/mehkai.github.io/randyCon_2016/scripts/'))
   .pipe(notify({message: 'Scripts task complete'}));
 });
 

@@ -19,4 +19,7 @@ body {
   display: block; }
 
 .main-container {
-  margin-top: 0.5%; }
+  margin-top: 0.35%; }
+
+.red {
+  border: 2px solid red; }
