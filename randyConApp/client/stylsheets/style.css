@@ -32,7 +32,7 @@ body {
 .post {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
-  *zoom: 1;
+  zoom: 1;
   position: relative;
   opacity: 1; }
   .post:before, .post:after {
@@ -213,3 +213,34 @@ body {
 .gamebringer {
   font: 1.5em;
 }
+
+.mainlinks {
+  background-color: #777;
+  font-size: 300%;
+  font-style: italic;
+  border-radius: 5px;
+  border: 2px solid white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white; }
+
+.mainlinksimg {
+  color: white;
+  /*margin-top: 4%;*/
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+.main-container {
+  margin-top: 0.35%; }
+
+.red {
+  /*border: 2px solid red;*/
+  /*height: 100%;*/
+ }
